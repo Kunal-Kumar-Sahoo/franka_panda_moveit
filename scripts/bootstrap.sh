@@ -6,10 +6,10 @@ cd "$ROOT"
 
 git submodule update --init --recursive
 
-git apply --check migration/franka_ros.patch
-git apply --check migration/boost_sml.patch
+git -C src/franka_ros apply --check "$ROOT/migration/franka_ros.patch"
+git -C src/boost_sml apply --check "$ROOT/migration/boost_sml.patch"
 
-git apply --directory=src/franka_ros migration/franka_ros.patch
-git apply --directory=src/boost_sml migration/boost_sml.patch
+git -C src/franka_ros apply "$ROOT/migration/franka_ros.patch"
+git -C src/boost_sml apply "$ROOT/migration/boost_sml.patch"
 
 echo "Source patches applied successfully."
