@@ -1,3 +1,10 @@
-# pixi environments
+# Pixi
 .pixi/*
 !.pixi/config.toml
+
+# Catkin
+.catkin_tools/
+build/
+devel/
+install/
+logs/
