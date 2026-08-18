@@ -1,0 +1,84 @@
+[workspace]
+name = "franka_panda"
+version = "0.1.0"
+channels = [
+    "https://prefix.dev/robostack-noetic",
+    "https://prefix.dev/conda-forge"
+]
+platforms = ["linux-64"]
+
+[dependencies]
+
+# ROS Noetic
+ros-noetic-ros-base = ">=1.5.0,<2"
+ros-noetic-catkin = ">=0.8.12,<0.9"
+catkin_tools = ">=0.9.5,<0.10"
+
+# ROS core
+ros-noetic-roscpp = ">=1.17.4,<2"
+ros-noetic-rospy = ">=1.17.4,<2"
+ros-noetic-std-msgs = ">=0.5.14,<0.6"
+ros-noetic-geometry-msgs = ">=1.13.2,<2"
+ros-noetic-sensor-msgs = ">=1.13.2,<2"
+ros-noetic-tf = ">=1.13.4,<2"
+ros-noetic-tf2 = ">=0.7.10,<0.8"
+ros-noetic-tf2-ros = ">=0.7.10,<0.8"
+ros-noetic-tf2-geometry-msgs = ">=0.7.10,<0.8"
+ros-noetic-tf-conversions = ">=1.13.4,<2"
+ros-noetic-eigen-conversions = ">=1.13.4,<2"
+ros-noetic-urdf = ">=1.13.4,<2"
+ros-noetic-xacro = ">=1.14.20,<2"
+
+# ROS actions / control
+ros-noetic-actionlib = ">=1.14.3,<2"
+ros-noetic-actionlib-msgs = ">=1.13.2,<2"
+ros-noetic-control-msgs = ">=1.5.2,<2"
+ros-noetic-trajectory-msgs = ">=1.13.2,<2"
+ros-noetic-ros-control = ">=0.20.0,<0.21"
+ros-noetic-ros-controllers = ">=0.22.0,<0.23"
+ros-noetic-controller-manager = ">=0.20.0,<0.21"
+ros-noetic-control-toolbox = ">=1.19.0,<2"
+ros-noetic-realtime-tools = ">=1.16.1,<2"
+ros-noetic-robot-state-publisher = ">=1.15.3,<2"
+ros-noetic-joint-state-publisher = ">=1.15.2,<2"
+
+# MoveIt
+ros-noetic-moveit = ">=1.1.16,<2"
+ros-noetic-moveit-core = ">=1.1.16,<2"
+ros-noetic-moveit-commander = ">=1.1.16,<2"
+ros-noetic-moveit-kinematics = ">=1.1.16,<2"
+ros-noetic-moveit-planners = ">=1.1.16,<2"
+ros-noetic-moveit-planners-ompl = ">=1.1.16,<2"
+ros-noetic-moveit-ros = ">=1.1.16,<2"
+ros-noetic-moveit-ros-move-group = ">=1.1.16,<2"
+ros-noetic-moveit-ros-planning = ">=1.1.16,<2"
+ros-noetic-moveit-ros-visualization = ">=1.1.16,<2"
+ros-noetic-moveit-ros-control-interface = ">=1.1.16,<2"
+ros-noetic-moveit-simple-controller-manager = ">=1.1.16,<2"
+ros-noetic-moveit-fake-controller-manager = ">=1.1.16,<2"
+
+# Build toolchain
+compilers = "*"
+cmake = ">=4.2.3,<5"
+ninja = ">=1.13.2,<2"
+make = "*"
+pkg-config = ">=0.29.2,<0.30"
+git = "*"
+
+# C++ dependencies
+eigen = ">=3.4,<3.5"
+
+# Python utilities
+python = ">=3.12,<3.13"
+pyyaml = "*"
+psutil = "*"
+osrf_pycommon = "*"
+ros-noetic-gazebo-dev = ">=2.9.3,<3"
+ros-noetic-gazebo-ros = ">=2.9.3,<3"
+ros-noetic-gazebo-ros-pkgs = ">=2.9.3,<3"
+ros-noetic-gazebo-ros-control = ">=2.9.3,<3"
+
+[tasks]
+build-libfranka = "bash scripts/build_libfranka.sh"
+build = "bash scripts/build.sh"
+check = "bash scripts/check.sh"

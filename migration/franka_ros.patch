@@ -1,0 +1,12 @@
+diff --git a/franka_hw/include/franka_hw/resource_helpers.h b/franka_hw/include/franka_hw/resource_helpers.h
+index 111461a..c1514fb 100644
+--- a/franka_hw/include/franka_hw/resource_helpers.h
++++ b/franka_hw/include/franka_hw/resource_helpers.h
+@@ -6,6 +6,7 @@
+ #include <map>
+ #include <string>
+ #include <vector>
++#include <cstdint>
+ 
+ #include <hardware_interface/controller_info.h>
+ 

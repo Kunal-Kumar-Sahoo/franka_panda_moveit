@@ -1,0 +1,25 @@
+franka_panda migration baseline
+
+pixi: 0.76.2
+
+franka_ros:
+  commit: c11f000c2737acc22ed8dfeff40555b2644a4294
+
+panda_moveit_config:
+  commit: a86da56ab1c756a851d8ee2a06dd04266d1653d6
+
+boost_sml:
+  commit: 4c7c90eb9e6c6e476e5de88363eb9182ff4138ce
+
+libfranka:
+  commit: f3b8d775a9c847cab32684c8a316f67867761674
+
+catkin:
+  build_type: Release
+  devel_layout: linked
+  cmake_policy_version_minimum: 3.5
+  Franka_DIR: $CONDA_PREFIX/lib/cmake/Franka
+
+intentional_patches:
+  - migration/franka_ros.patch
+  - migration/boost_sml.patch
