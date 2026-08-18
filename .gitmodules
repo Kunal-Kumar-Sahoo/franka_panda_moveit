@@ -1,0 +1,12 @@
+[submodule "src/franka_ros"]
+	path = src/franka_ros
+	url = https://github.com/frankarobotics/franka_ros.git
+[submodule "src/panda_moveit_config"]
+	path = src/panda_moveit_config
+	url = https://github.com/moveit/panda_moveit_config.git
+[submodule "src/boost_sml"]
+	path = src/boost_sml
+	url = https://github.com/PickNikRobotics/boost_sml.git
+[submodule "third_party/libfranka"]
+	path = third_party/libfranka
+	url = https://github.com/frankaemika/libfranka.git
